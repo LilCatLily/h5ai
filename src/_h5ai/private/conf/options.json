@@ -231,14 +231,8 @@
     },
 
     /*
-    Show an image preview on click.
-
-    - types: array of strings
-    - size: number, sample size, or false for original size
-    */
     "preview-img": {
         "enabled": true,
-        "size": false,
         "types": ["img", "img-bmp", "img-gif", "img-ico", "img-jpg", "img-png", "img-raw", "img-svg"]
     },
 
@@ -352,13 +346,7 @@
     writable for the web Server.
 
     - img: array of strings
-    - mov: array of strings
-    - doc: array of strings
-    - delay: number, delay in milliseconds after "dom-ready" before thumb-requesting starts
-    - size: number, size in pixel of the generated thumbnails
-    - exif: boolean, use included EXIF thumbs if possible
-    - chunksize: int, number of thumbs per request
-    */
+    - size: number, height in pixel of the generated thumbnail
     "thumbnails": {
         "enabled": true,
         "img": ["img-bmp", "img-gif", "img-ico", "img-jpg", "img-png"],
