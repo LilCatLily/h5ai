@@ -1,0 +1,53 @@
+name: Upload Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master2
+
+jobs:
+  nightly:
+
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3.0.2
+      with:
+        fetch-depth: 1
+
+    - name: Build with npm
+      uses: actions/setup-node@v3
+      with:
+        node-version: 10.15
+    - run: npm install
+    - run: npm run build
+
+    - name: ZIP Executable
+      if: steps.commitswithintime.outputs.has-new-commits-within-time != 'false'
+      uses: vimtor/action-zip@v1
+      with:
+        files: build/_h5ai
+        dest: _h5ai.zip
+
+    - name: Upload Release Build
+      if: steps.commitswithintime.outputs.has-new-commits-within-time != 'false'
+      uses: WebFreak001/deploy-nightly@v2.0.0
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      with:
+        upload_url: https://uploads.github.com/repos/biast12/h5ai/releases/174817631/assets{?name,label}
+        release_id: 174817631
+        asset_path: ./_h5ai.zip
+        asset_name: _h5ai.zip
+        asset_content_type: application/zip
+        max_releases: 1
+
+    - name: Update Release
+      if: steps.commitswithintime.outputs.has-new-commits-within-time != 'false'
+      uses: richardsimko/update-tag@v1.0.5
+      with:
+        tag_name: 'Release2'
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
