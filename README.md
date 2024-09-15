@@ -60,7 +60,7 @@ THE SOFTWARE.
 too. Exceptions are some [Material Design icons][material-design-icons] (CC BY 4.0).
 
 
-[web]: https://larsjung.de/h5ai/
+[web]: https://github.com/biast12/h5ai
 [github]: https://github.com/lrsjng/h5ai
 [github-issues]: https://github.com/lrsjng/h5ai/issues
 [release]: https://release.larsjung.de/h5ai/

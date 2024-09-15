@@ -2,7 +2,7 @@
   "name": "h5ai",
   "version": "0.30.0",
   "description": "Modern HTTP web server index.",
-  "homepage": "https://larsjung.de/h5ai/",
+  "homepage": "https://github.com/biast12/h5ai",
   "author": "Lars Jung <lrsjng@gmail.com> (https://larsjung.de)",
   "license": "MIT",
   "repository": {
