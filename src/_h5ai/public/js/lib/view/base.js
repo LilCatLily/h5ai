@@ -13,7 +13,7 @@ const TPL_TOPBAR =
                 <img src="/_h5ai/public/images/ui/DiscordLogo.png" id="topBarImage" alt="DiscordSupportServer">
             </a>
             <a id="backlink2" href="/sync" title="Download the full files with Resilio Sync and keep it automatically updated">
-                <img src="/_h5ai/public/images/ui/ResilioLogo.png" id="topBarImage" alt="ResilioSync">
+                <img src="/_h5ai/public/images/ui/ResilioLogo.svg" id="topBarImage" alt="ResilioSync">
             </a>
             <a id="backlink2" href="." title="The Archives">
                 <img src="/_h5ai/public/images/favicon/archive_logo.png" id="topBarImage" alt="TheArchives">
