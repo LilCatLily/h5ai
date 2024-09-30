@@ -1,4 +1,4 @@
-const {dom} = require('../../util');
+const {dom, debugLog} = require('../../util');
 const allsettings = require('../../core/settings');
 const preview = require('./preview');
 
@@ -24,7 +24,7 @@ const updateGui = () => {
 };
 
 const load = item => {
-    console.log("loading");
+    debugLog('loading');
     const $el = dom("<object><p>Your browser does not support in-frame PDF rendering. :/</p></object>")
         .attr("data", item.absHref)
         .attr("type", "application/pdf");

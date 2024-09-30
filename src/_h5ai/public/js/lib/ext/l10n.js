@@ -1,4 +1,4 @@
-const {each, isStr, dom} = require('../util');
+const {each, isStr, dom, debugLog} = require('../util');
 const server = require('../server');
 const event = require('../core/event');
 const format = require('../core/format');
@@ -56,6 +56,11 @@ const update = lang => {
     }
 
     const sel = 'selected';
+    // Log the current language information in a readable format
+    debugLog('This is your language: ' + currentLang.isoCode + " - " + currentLang.lang.charAt(0).toUpperCase() + currentLang.lang.slice(1) + ".");
+
+    // Log the entire language configuration object for debugging purposes
+    debugLog('Lang config: ', currentLang);
     dom('#langs option').rmAttr(sel).rmProp(sel);
     dom('#langs .' + currentLang.isoCode).attr(sel, '').prop(sel, true);
 

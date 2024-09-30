@@ -1,3 +1,5 @@
+const { debugLog } = require('../util');
+
 const isElementLoaded = (selector) => {
     return new Promise((resolve) => {
         function checkElement() {
@@ -33,16 +35,16 @@ isElementLoaded("#customText").then((selector) => {
     // Check if the randomChance is 1 to show the easter egg text
     if (randomChance === 1) {
         const easterTextItem = easterText[Math.floor(Math.random() * easterText.length)];
-        console.log("Easter number is active");
+        debugLog('Easter number is active');
         customText.innerHTML = easterTextItem;
         if (easterTextItem === easterText[2]) {
             customImg.src = "/_h5ai/public/images/ui/transFlag.jpg";
         }
     } else if (randomChance === easterTextLegends.length) {
         const easterTextItem = easterTextLegends[Math.floor(Math.random() * easterTextLegends.length)];
-        console.log("Easter number is active");
+        debugLog('Easter number is active');
         customText.innerHTML = easterTextItem;
     } else {
-        console.log("Random chance is: " + randomChance);
+        debugLog(`Random chance is: ${randomChance}`);
     }
 });
