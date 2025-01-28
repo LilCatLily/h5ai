@@ -1,5 +1,5 @@
 # h5ai
-
+[![Upload Release](https://github.com/LilCatLily/h5ai/actions/workflows/release.yml/badge.svg)](https://github.com/LilCatLily/h5ai/actions/workflows/release.yml)
 [![license][license-img]][github] [![web][web-img]][web] [![github][github-img]][github]
 
 A modern HTTP web server index for Apache httpd, lighttpd, and nginx.
