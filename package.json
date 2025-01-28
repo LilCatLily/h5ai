@@ -1,13 +1,13 @@
 {
   "name": "h5ai",
   "version": "0.30.0",
-  "description": "Modern HTTP web server index.",
-  "homepage": "https://github.com/biast12/h5ai",
+  "description": "Modern web server indexer",
+  "homepage": "https://github.com/LilCatLily/h5ai",
   "author": "Lars Jung <lrsjng@gmail.com> (https://larsjung.de)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/biast12/h5ai.git"
+    "url": "https://github.com/LilCatLily/h5ai.git"
   },
   "scripts": {
     "lint": "eslint .",
