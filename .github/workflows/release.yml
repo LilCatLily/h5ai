@@ -1,4 +1,4 @@
-name: Upload Release
+name: Update Latest Build
 
 on:
   workflow_dispatch:
@@ -12,25 +12,25 @@ jobs:
       fail-fast: false
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3.0.2
+    - uses: actions/checkout@v4.2.2
       with:
         fetch-depth: 1
 
     - name: Build with npm
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4.2.0
       with:
         node-version: 10.15
     - run: npm install
     - run: npm run build
 
     - name: ZIP Executable
-      uses: vimtor/action-zip@v1
+      uses: vimtor/action-zip@v1.2
       with:
         files: build/_h5ai
         dest: _h5ai.zip
 
     - name: Upload Release Build
-      uses: WebFreak001/deploy-nightly@v2.0.0
+      uses: WebFreak001/deploy-nightly@v3.2.0
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       with:
@@ -42,7 +42,7 @@ jobs:
         max_releases: 1
 
     - name: Update Release
-      uses: richardsimko/update-tag@v1.0.5
+      uses: richardsimko/update-tag@v1.0.11
       with:
         tag_name: 'latest'
       env:
