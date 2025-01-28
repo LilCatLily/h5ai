@@ -7,8 +7,8 @@ const store = require('../core/store');
 const allsettings = require('../core/settings');
 const base = require('./base');
 
-const modes = ['details', 'grid', 'icons'];
-const sizes = [20, 40, 60, 80, 100, 150, 200, 250, 300, 350, 400];
+const modes = ['icons'];
+const sizes = [260];
 const settings = Object.assign({
     binaryPrefix: false,
     hideFolders: false,
