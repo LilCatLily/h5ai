@@ -24,9 +24,9 @@ const loginTpl =
         </div>`;
 const supportTpl =
         `<div id="support">
-            Support me by joining my Patreon
+            Tip me if you want to support my work!
             <div class="Patreon">
-                <a href="https://www.patreon.com/Biast12" target="_blank">
+                <a href="https://ko-fi.com/littlelilycat" target="_blank">
                     <input type="image" src="${resource.image('patreon')}" name="submit" alt="Patreon"/>
                 </a>
             </div>
